@@ -21,8 +21,9 @@ export default function Cities() {
         label: e?.name,
       }
     })
+    temporary.shift()
     setCat(temporary)
-  }, [cities]);
+  }, [cities])
   
   return (
     <>
