@@ -21,7 +21,7 @@ function itemsLoading(payload) {
 export function fetchCities() {
   return function (dispatch, getState) {
     dispatch(itemsLoading());
-    fetch(`https://kladr-api.ru/api.php?query=Москва&contentType=city&token=5bkK4F9NND762d2yKGADaZikZ9KNsSsZ`, {
+    fetch(`https://kladr-api.ru/api.php?query=а&contentType=city&token=5bkK4F9NND762d2yKGADaZikZ9KNsSsZ`, {
       method: "GET",
     })
       .then((response) => {
