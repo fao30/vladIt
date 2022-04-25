@@ -9,6 +9,7 @@ export default function Cities() {
   const { cities, isLoading } = useSelector((state) => state.city);
   const dispatch = useDispatch();
   const [cat, setCat] = useState([]);
+  const [choice, setChoice] = useState("Hasn't Picked");
 
   useEffect(() => {
     dispatch(fetchCities());
@@ -50,9 +51,15 @@ export default function Cities() {
                   isLoading={false}
                   isSearchable={true}
                   name="color"
+                  onChange={(e)=>(
+                    setChoice(e.label)
+                  )}
                   options={cat}
                   />
           </div>
+          <br />
+          <p>Your Choise Is:</p>
+          <label>{choice}</label>
         </>
       )}
     </>
